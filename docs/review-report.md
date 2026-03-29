@@ -1,5 +1,5 @@
 # Review Report: Marrow & Tide
-**Status: FAIL**
+**Status: PASS**
 **Live URL:** https://marrow-and-tide.vercel.app
 **Date:** 2026-03-29
 
@@ -26,23 +26,22 @@
 - [x] Content matches brief — no placeholder text
 - [x] Images load on all pages reviewed
 - [x] Logo present in header
-- [x] Favicon implemented in source
+- [x] Favicon present
 - [x] Navigation works across the main site pages reviewed
 - [x] Responsive layout holds at desktop, tablet, and mobile viewports reviewed
 - [x] Meta tags present (title, description, OG)
 - [x] Color palette matches the design direction and remains cohesive
 - [x] Text is readable on all reviewed backgrounds
 - [x] Typography matches the design spec direction
-- [x] Footer includes contact info, hours, and social links
-- [ ] Favicon confirmed on the live deployment
-- [ ] robots.txt available on the live deployment
-- [ ] sitemap.xml available on the live deployment
-- [ ] OG image confirmed on the live deployment
+- [x] OG image / link preview metadata present
+- [x] Footer complete with contact info
+- [x] robots.txt available on the live deployment
+- [x] sitemap.xml available on the live deployment
+- [x] Listed rework fixes verified on the live deployment
 
 ## Issues Found
-1. **Critical SEO/deployment issue — platform metadata files are not available on the live site.** Requests to `/robots.txt`, `/sitemap.xml`, `/favicon.svg`, and `/opengraph-image` all returned 404 during review. This fails the studio SEO baseline and prevents confirmation of the live favicon and OG asset.
-2. **Footer newsletter and social CTA use placeholder-level destinations.** The footer newsletter form posts to `formsubmit.co` and the Instagram links point to `https://www.instagram.com/` rather than a brand account. The Contact page also includes a `Join the List` link with `href="#"`. These are not broken visually, but they are incomplete production pathways.
-3. **Primary booking flow is still routed through generic contact links rather than a clearer booking destination.** Multiple `Book Now` and booking CTAs point to `/contact/` instead of a dedicated booking integration or clearer booking placeholder flow. This is acceptable as a temporary pattern, but it reads unfinished against the brief’s request for strong booking pathways.
+- No blocking issues found in this re-review.
+- Note: the contact-page enquiry links now resolve correctly, but the rendered text fetch does not expose whether the enquiry type is auto-selected from the query string. The destination path itself is correct and no placeholder link remains.
 
 ## Verdict
-The live site is polished, on-brand, and cohesive in tone. It matches the editorial-coastal brief well, the content is strong, the layout feels considered across viewports, and the core pages are present with working primary navigation. However, this review is a **FAIL** because the live deployment is missing key SEO and identity assets at public routes: `robots.txt`, `sitemap.xml`, favicon, and the OG image route all returned 404. Those issues are enough to fail the studio quality gate even though the visual and content execution is otherwise strong. Fix the missing metadata asset deployment and replace the remaining placeholder external/contact pathways, then re-review.
+This re-review is a **PASS**. The live site is accessible, on-brand, and aligned with the original brief across Home, About, Suppers, Pantry, and Contact. The previously failing deployment assets are now live: `robots.txt`, `sitemap.xml`, `favicon.svg`, and the OG image route all resolve publicly, and metadata now references stable production OG assets. The Instagram links point to the brand account, the footer and contact mailing-list flows use real contact-page paths, and the Suppers booking and private dining CTAs now route through clearer enquiry URLs. Layout, imagery, typography, contrast, and navigation all hold up across desktop, tablet, and mobile screenshots, so the site clears the studio quality gate.
