@@ -3,10 +3,28 @@ import Link from "next/link";
 import { FAQAccordion } from "@/components/faq-accordion";
 
 export const metadata: Metadata = {
-  title: "Marrow & Tide Pantry | Preserves, loaves, cultured butter, and provisions",
+  title: "Pantry Provisions in Lyttelton | Marrow & Tide",
   description:
-    "Browse Marrow & Tide pantry favourites including preserves, cultured dairy, breads, sea salt blends, and weekly drops from Lyttelton.",
+    "Browse pantry provisions in Lyttelton, Christchurch from Marrow & Tide, including preserves, loaves, cultured butter, sea salt blends, and weekly pantry drops.",
+  keywords: [
+    "pantry provisions Lyttelton",
+    "small-batch pantry staples Christchurch",
+    "preserves Lyttelton",
+    "fresh bread Lyttelton",
+    "cultured butter Christchurch",
+  ],
   alternates: { canonical: "/pantry/" },
+  openGraph: {
+    title: "Pantry Provisions in Lyttelton | Marrow & Tide",
+    description:
+      "Explore Marrow & Tide pantry favourites including preserves, cultured dairy, breads, sea salt blends, and weekly drops in Lyttelton.",
+    url: "/pantry/",
+  },
+  twitter: {
+    title: "Pantry Provisions in Lyttelton | Marrow & Tide",
+    description:
+      "Explore Marrow & Tide pantry favourites including preserves, cultured dairy, breads, sea salt blends, and weekly drops in Lyttelton.",
+  },
 };
 
 const categories = [
@@ -14,31 +32,31 @@ const categories = [
     title: "Preserves",
     body: "Slow-cooked preserves, pickles, and savoury jars for toast, cheese, and cooking.",
     image: "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=800&h=700&fit=crop",
-    alt: "Close-up of prepared food and accompaniments on ceramic dishes",
+    alt: "Small-batch preserves and pantry provisions from Marrow & Tide in Lyttelton",
   },
   {
     title: "Cultured Dairy",
     body: "Butter and cultured elements made for bread, fish, and quiet excess.",
     image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&h=700&fit=crop",
-    alt: "Fresh baked loaves stacked on a bakery surface",
+    alt: "Fresh loaves and cultured dairy style pantry staples in Lyttelton",
   },
   {
     title: "Baking",
     body: "Fresh loaves and seasonal baked goods for pantry regulars and weekend visitors.",
     image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=700&fit=crop",
-    alt: "Bread and pantry ingredients arranged on a table",
+    alt: "Fresh bread and pantry ingredients at Marrow & Tide in Christchurch",
   },
   {
     title: "Sea Salt Blends",
     body: "Kelp, citrus, smoke, and mineral notes blended in small runs.",
     image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&h=700&fit=crop",
-    alt: "Fresh ingredients arranged in bowls and dishes",
+    alt: "Sea salt blend ingredients prepared for a Lyttelton pantry provisions studio",
   },
   {
     title: "Gift Boxes",
     body: "Useful, beautiful pantry bundles for hosts, travellers, and generous people.",
     image: "https://images.unsplash.com/photo-1514996937319-344454492b37?w=800&h=700&fit=crop",
-    alt: "Wrapped pantry items arranged as a gift set",
+    alt: "Gift box of pantry provisions from Marrow & Tide in Lyttelton",
   },
 ];
 
@@ -49,7 +67,7 @@ const featured = [
     note: "Available Thu–Sun until sold out",
     body: "Slow-cultured, lightly salted, and wrapped in parchment for the week’s bread.",
     image: "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=700&h=800&fit=crop",
-    alt: "Jarred pantry goods on a shelf",
+    alt: "Cultured butter and pantry goods on shelves at Marrow & Tide in Lyttelton",
   },
   {
     name: "Smoked Tomato Preserve",
@@ -57,7 +75,7 @@ const featured = [
     note: "240ml jar",
     body: "Sweet depth, savoury smoke, and enough acidity to lift roast vegetables or sharp cheese.",
     image: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=700&h=800&fit=crop",
-    alt: "Preserved produce in glass jars",
+    alt: "Jar of smoked tomato preserve from a Christchurch pantry provisions studio",
   },
   {
     name: "Kelp & Lemon Sea Salt",
@@ -65,7 +83,7 @@ const featured = [
     note: "Small-batch blend",
     body: "A finishing salt with clean citrus lift and a coastal mineral edge.",
     image: "https://images.unsplash.com/photo-1505576391880-b3f9d713dc4f?w=700&h=800&fit=crop",
-    alt: "Seasoning ingredients and salts on a surface",
+    alt: "Small-batch sea salt blend prepared for pantry sales in Lyttelton",
   },
   {
     name: "Thursday Rye Loaf",
@@ -73,7 +91,7 @@ const featured = [
     note: "Pickup from 9am",
     body: "Dark crumb, crackling crust, and built to take too much butter.",
     image: "https://images.unsplash.com/photo-1453831362806-3d5577f014a4?w=700&h=800&fit=crop",
-    alt: "Rustic baked loaf or bread arrangement",
+    alt: "Fresh rye loaf available from the Marrow & Tide pantry in Lyttelton",
   },
 ];
 
@@ -106,7 +124,7 @@ export default function PantryPage() {
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-secondary">Pantry</p>
             <h1 className="mt-4 font-heading text-[42px] leading-none tracking-[-0.03em] text-primary md:text-6xl lg:text-[64px]">
-              Small-batch staples for the walk home, the weekend table, and the friend you’re not arriving empty-handed to.
+              Pantry provisions in Lyttelton for the walk home, the weekend table, and the friend you’re not arriving empty-handed to.
             </h1>
             <p className="prose-copy mt-6 text-lg leading-8 text-text/85">
               The pantry shelves hold the practical side of Marrow &amp; Tide: preserves, cultured butter, sea salt blends, fresh loaves, and limited weekly goods made in the same kitchen as the suppers.
@@ -122,7 +140,7 @@ export default function PantryPage() {
           </div>
           <img
             src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=1100&h=1200&fit=crop"
-            alt="Pantry shelves with jars, bottles, and preserved goods"
+            alt="Pantry shelves of jars and provisions at Marrow & Tide in Lyttelton"
             className="h-[460px] w-full rounded-[28px] object-cover shadow-medium lg:h-[620px]"
           />
         </div>
@@ -130,6 +148,12 @@ export default function PantryPage() {
 
       <section className="bg-muted py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-[1280px] px-6 md:px-8 lg:px-10">
+          <div className="mb-10 max-w-2xl">
+            <p className="font-mono text-xs uppercase tracking-[0.3em] text-secondary">Pantry categories</p>
+            <h2 className="mt-4 font-heading text-[32px] leading-[1.05] tracking-[-0.03em] text-primary md:text-[42px]">
+              Small-batch pantry staples from Lyttelton, ready for pickup or the weekend table.
+            </h2>
+          </div>
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-6">
             {categories.map((category, index) => (
               <article
@@ -139,7 +163,7 @@ export default function PantryPage() {
                 <img src={category.image} alt={category.alt} className="h-72 w-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/55 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-6 text-background">
-                  <h2 className="font-heading text-3xl leading-tight">{category.title}</h2>
+                  <h3 className="font-heading text-3xl leading-tight">{category.title}</h3>
                   <p className="mt-3 text-base leading-7 text-background/82">{category.body}</p>
                 </div>
               </article>
@@ -153,7 +177,7 @@ export default function PantryPage() {
           <div className="mb-10 max-w-2xl">
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-secondary">Featured products</p>
             <h2 className="mt-4 font-heading text-[32px] leading-[1.05] tracking-[-0.03em] text-primary md:text-[42px]">
-              Core staples with enough personality to become part of the week’s routine.
+              Core pantry provisions with enough personality to become part of the week’s routine.
             </h2>
           </div>
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -179,7 +203,7 @@ export default function PantryPage() {
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-accent">Weekly drops</p>
             <h2 className="mt-4 font-heading text-[32px] leading-[1.05] tracking-[-0.03em] md:text-[42px]">
-              Some things return every week. Others appear once and vanish with the weather.
+              Weekly pantry drops in Lyttelton: some things return, others vanish with the weather.
             </h2>
             <p className="mt-6 text-lg leading-8 text-background/82">
               Join the list for first notice on fresh loaves, new preserves, special salts, gift bundles, and pantry runs tied to upcoming suppers.
@@ -192,7 +216,7 @@ export default function PantryPage() {
           </div>
           <img
             src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=900&h=700&fit=crop"
-            alt="Coffee counter or market-style provisions scene"
+            alt="Weekly pantry drop display for provisions pickup in Lyttelton"
             className="h-[380px] w-full rounded-[28px] object-cover shadow-hard"
           />
         </div>

@@ -2,9 +2,29 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Marrow & Tide | Coastal suppers and pantry provisions in Lyttelton",
+  title: "Coastal Supper Club Lyttelton | Marrow & Tide",
   description:
-    "Chef-led coastal suppers, pantry staples, and slow hospitality in Lyttelton. Reserve a long-table evening or explore small-batch provisions from Marrow & Tide.",
+    "Chef-led coastal supper club and pantry provisions studio in Lyttelton, Christchurch. Book seasonal long-table dining and small-batch pantry staples at Marrow & Tide.",
+  keywords: [
+    "coastal supper club Lyttelton",
+    "Lyttelton supper club",
+    "Christchurch supper club",
+    "seasonal dining Lyttelton",
+    "long-table dining Christchurch",
+    "pantry provisions Lyttelton",
+  ],
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Coastal Supper Club Lyttelton | Marrow & Tide",
+    description:
+      "Book chef-led coastal suppers and explore pantry provisions in Lyttelton, Christchurch with Marrow & Tide.",
+    url: "/",
+  },
+  twitter: {
+    title: "Coastal Supper Club Lyttelton | Marrow & Tide",
+    description:
+      "Book chef-led coastal suppers and explore pantry provisions in Lyttelton, Christchurch with Marrow & Tide.",
+  },
 };
 
 const suppers = [
@@ -16,7 +36,7 @@ const suppers = [
     availability: "8 seats left",
     image:
       "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&h=900&fit=crop",
-    alt: "Chef plating food carefully in a professional kitchen",
+    alt: "Chef-led coastal supper preparation in the Marrow & Tide kitchen for a Lyttelton dining event",
   },
   {
     date: "02 May 2026",
@@ -26,7 +46,7 @@ const suppers = [
     availability: "Selling quickly",
     image:
       "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&h=900&fit=crop",
-    alt: "Plated fish dish with herbs and textured garnish",
+    alt: "Seasonal seafood plate for a coastal supper club in Lyttelton, Christchurch",
   },
   {
     date: "16 May 2026",
@@ -36,7 +56,7 @@ const suppers = [
     availability: "Limited release",
     image:
       "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=800&h=900&fit=crop",
-    alt: "Rustic meal shared at a wooden table with serving plates",
+    alt: "Long-table dining scene for a seasonal supper club near Christchurch",
   },
 ];
 
@@ -48,7 +68,7 @@ const pantryItems = [
     price: "$12",
     image:
       "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=700&h=800&fit=crop",
-    alt: "Pantry shelves with jars, bottles, and preserved goods",
+    alt: "Lyttelton pantry provisions shelves with jars, bottles, and preserved goods",
   },
   {
     name: "Kelp & Lemon Sea Salt",
@@ -57,7 +77,7 @@ const pantryItems = [
     price: "$14",
     image:
       "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=700&h=800&fit=crop",
-    alt: "Bread and pantry ingredients arranged on a table",
+    alt: "Small-batch pantry provisions and fresh bread at Marrow & Tide in Lyttelton",
   },
   {
     name: "Smoked Tomato Preserve",
@@ -66,7 +86,7 @@ const pantryItems = [
     price: "$16",
     image:
       "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=700&h=800&fit=crop",
-    alt: "Close-up of prepared food and accompaniments on ceramic dishes",
+    alt: "Prepared coastal pantry dish and preserves from a Christchurch provisions studio",
   },
   {
     name: "Thursday Rye Loaf",
@@ -75,34 +95,34 @@ const pantryItems = [
     price: "$11",
     image:
       "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=700&h=800&fit=crop",
-    alt: "Fresh baked loaves stacked on a bakery surface",
+    alt: "Fresh rye loaves from the Marrow & Tide pantry in Lyttelton",
   },
 ];
 
 const galleryImages = [
   {
     src: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=900&h=700&fit=crop",
-    alt: "Friends gathered around a table in warm evening light",
+    alt: "Guests gathered for a candlelit coastal supper in Lyttelton",
     classes: "sm:col-span-2 sm:row-span-1",
   },
   {
     src: "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=700&h=900&fit=crop",
-    alt: "Styled plated meal on a rustic tabletop",
+    alt: "Editorial seasonal plate served at a chef-led supper club in Christchurch",
     classes: "sm:row-span-2",
   },
   {
     src: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=700&h=900&fit=crop",
-    alt: "Seafood dish plated with herbs and dark stoneware",
+    alt: "Coastal seafood dish plated for a Marrow & Tide supper menu",
     classes: "sm:row-span-2",
   },
   {
     src: "https://images.unsplash.com/photo-1416339306562-f3d12fefd36f?w=700&h=700&fit=crop",
-    alt: "Harbour view with misty light and boats near shore",
+    alt: "Lyttelton harbour atmosphere near the Marrow & Tide supper club",
     classes: "sm:col-span-1",
   },
   {
     src: "https://images.unsplash.com/photo-1515669097368-22e68427d265?w=700&h=700&fit=crop",
-    alt: "Hands pouring a drink beside a set dinner table",
+    alt: "Slow hospitality details at a long-table dining experience in Lyttelton",
     classes: "sm:col-span-1",
   },
 ];
@@ -130,7 +150,7 @@ export default function HomePage() {
       <section className="relative flex min-h-screen items-center overflow-hidden bg-primary pt-32 md:pt-40">
         <img
           src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&h=1100&fit=crop"
-          alt="Candlelit long-table supper with plates and glasses in a dim restaurant setting"
+          alt="Candlelit coastal supper club in Lyttelton with shared plates and glasses on a long table"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-primary/60" />
@@ -140,7 +160,7 @@ export default function HomePage() {
               <span className="inline-block h-px w-14 bg-secondary" />Lyttelton, Aotearoa New Zealand
             </p>
             <h1 className="font-heading text-[42px] leading-none tracking-[-0.03em] md:text-6xl lg:text-[64px]">
-              Coastal suppers and pantry provisions shaped by harbour weather, open flame, and the long table.
+              Coastal supper club in Lyttelton with pantry provisions shaped by harbour weather, open flame, and the long table.
             </h1>
             <p className="prose-copy mt-6 text-lg leading-8 text-background/85">
               By night, Marrow &amp; Tide gathers guests around seasonal suppers built from local catch, smoked vegetables, broths, loaves, and wild herbs. By day, the shelves fill with small-batch staples made for the port community.
@@ -164,13 +184,13 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-[1280px] items-center gap-10 px-6 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-10">
           <img
             src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&h=1100&fit=crop"
-            alt="Warm restaurant interior with diners and natural wood textures"
+            alt="Warm restaurant interior for a chef-led supper club in Lyttelton"
             className="order-1 h-[440px] w-full rounded-[28px] object-cover shadow-medium lg:order-2 lg:h-[560px]"
           />
           <div className="order-2 lg:order-1">
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-secondary">Part galley. Part pantry. Part ritual.</p>
             <h2 className="mt-4 font-heading text-[32px] leading-[1.05] tracking-[-0.03em] text-primary md:text-[42px]">
-              A space built for weather, appetite, and return visits.
+              A Lyttelton dining space built for weather, appetite, and return visits.
             </h2>
             <p className="prose-copy mt-6 text-lg leading-8 text-text/85">
               Marrow &amp; Tide began as a winter pop-up by former expedition cook Hana Wereta and baker-turned-fermenter Luca Bennett. After years cooking on research vessels, in remote lodges, and across South Island kitchens, they settled in Lyttelton to make something slower and closer to home.
@@ -191,7 +211,7 @@ export default function HomePage() {
             <div className="max-w-2xl">
               <p className="font-mono text-xs uppercase tracking-[0.3em] text-secondary">Upcoming suppers</p>
               <h2 className="mt-4 font-heading text-[32px] leading-[1.05] tracking-[-0.03em] text-primary md:text-[42px]">
-                Three evenings built around the season now on the table.
+                Seasonal long-table dining in Lyttelton for the season now on the table.
               </h2>
               <p className="mt-5 text-lg leading-8 text-text/85">
                 Small groups. Shared courses. Menus that respond to weather, catch, and what the growers have brought in that week.
@@ -231,7 +251,7 @@ export default function HomePage() {
           <div className="max-w-2xl">
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-secondary">From the pantry</p>
             <h2 className="mt-4 font-heading text-[32px] leading-[1.05] tracking-[-0.03em] text-primary md:text-[42px]">
-              The staples people come back for between suppers.
+              Pantry provisions in Lyttelton that people come back for between suppers.
             </h2>
             <p className="mt-5 text-lg leading-8 text-text/85">
               Small-batch goods for the walk home, the weekend table, or a useful gift brought to someone else’s kitchen.
@@ -282,7 +302,7 @@ export default function HomePage() {
         <div className="mx-auto mt-10 max-w-[1280px] px-6 md:px-8 lg:px-10">
           <img
             src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=900&h=700&fit=crop"
-            alt="Shared dinner scene with glasses and plates across a dark table"
+            alt="Shared long-table dining scene at Marrow & Tide in Lyttelton"
             className="h-64 w-full rounded-[28px] object-cover shadow-hard lg:-mb-40 lg:ml-auto lg:w-[420px]"
           />
         </div>
@@ -293,7 +313,7 @@ export default function HomePage() {
           <div className="mb-10 max-w-2xl">
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-secondary">Gallery</p>
             <h2 className="mt-4 font-heading text-[32px] leading-[1.05] tracking-[-0.03em] text-primary md:text-[42px]">
-              Harbour light, slow hands, and the details that hold the room together.
+              Lyttelton harbour light, slow hands, and the details that hold the room together.
             </h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2">
@@ -310,7 +330,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-muted py-16 md:py-20 lg:py-28">
         <img
           src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&h=600&fit=crop"
-          alt="Quiet harbour or waterside detail in soft evening light"
+          alt="Evening harbour atmosphere near Marrow & Tide in Lyttelton"
           className="absolute right-0 top-0 hidden h-full w-1/3 object-cover opacity-20 lg:block"
         />
         <div className="relative mx-auto max-w-[1280px] px-6 md:px-8 lg:px-10">

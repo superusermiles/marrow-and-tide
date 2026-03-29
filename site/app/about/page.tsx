@@ -2,10 +2,28 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Marrow & Tide | Hana, Luca, and the table behind the harbour",
+  title: "About Marrow & Tide | Lyttelton Coastal Supper Club",
   description:
-    "Meet the founders of Marrow & Tide and learn how expedition cooking, fermentation, and Lyttelton harbour shaped this chef-led supper club and provisions studio.",
+    "Learn about Marrow & Tide, the chef-led coastal supper club and pantry studio in Lyttelton, Christchurch, shaped by harbour cooking, fermentation, and local sourcing.",
+  keywords: [
+    "about Marrow & Tide",
+    "Lyttelton coastal supper club",
+    "chef-led dining Christchurch",
+    "local sourcing Lyttelton",
+    "pantry studio Christchurch",
+  ],
   alternates: { canonical: "/about/" },
+  openGraph: {
+    title: "About Marrow & Tide | Lyttelton Coastal Supper Club",
+    description:
+      "Meet the founders behind Marrow & Tide and the harbour-rooted philosophy guiding its Lyttelton supper club and pantry studio.",
+    url: "/about/",
+  },
+  twitter: {
+    title: "About Marrow & Tide | Lyttelton Coastal Supper Club",
+    description:
+      "Meet the founders behind Marrow & Tide and the harbour-rooted philosophy guiding its Lyttelton supper club and pantry studio.",
+  },
 };
 
 const timeline = [
@@ -14,28 +32,28 @@ const timeline = [
     title: "Cooking where weather called the terms",
     body: "Hana Wereta spent years cooking aboard research vessels and in remote field settings, building menus from what could be carried, caught, preserved, or coaxed into comfort after a hard day outside. That instinct for useful beauty still shapes every service.",
     image: "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=900&h=700&fit=crop",
-    alt: "Rustic meal shared at a wooden table with serving plates",
+    alt: "Shared seasonal meal that reflects the origins of Marrow & Tide's Lyttelton supper club",
   },
   {
     label: "South Island kitchens",
     title: "Bread, ferments, and the work between meals",
     body: "Luca Bennett came through bakery benches and kitchen prep rooms, then moved steadily toward cultured butter, pickles, and pantry work that gives a table depth long before a plate arrives. The pantry side of Marrow & Tide grows from that practice.",
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&h=700&fit=crop",
-    alt: "Warm restaurant interior with diners and natural wood textures",
+    alt: "Restaurant interior that reflects the warm hospitality of Marrow & Tide in Lyttelton",
   },
   {
     label: "Winter pop-up",
     title: "A room people started returning to",
     body: "Their first long-table evenings were meant to carry a quiet season. Instead, they became something regular: a place where locals brought friends, visitors booked ahead, and the room developed its own pace.",
     image: "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=900&h=700&fit=crop",
-    alt: "Rustic meal shared at a wooden table with serving plates",
+    alt: "Long-table dinner that captures the early Marrow & Tide supper club atmosphere",
   },
   {
     label: "Now",
     title: "Part neighbourhood ritual, part destination table",
     body: "Today, Marrow & Tide holds both sides together — intimate coastal suppers and a provisions counter made for daily use. It belongs to Lyttelton first, but rewards anyone willing to come for the evening.",
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&h=700&fit=crop",
-    alt: "Warm restaurant interior with diners and natural wood textures",
+    alt: "Chef-led dining room setting at Marrow & Tide in Lyttelton, Christchurch",
   },
 ];
 
@@ -53,21 +71,21 @@ const team = [
     role: "Co-founder · Chef",
     body: "Builds the supper menus, broths, and savoury backbone of the house.",
     image: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=700&h=800&fit=crop",
-    alt: "Friends gathered around a table in warm evening light",
+    alt: "Chef-led hospitality portrait representing Marrow & Tide's supper club team in Lyttelton",
   },
   {
     title: "Luca Bennett",
     role: "Co-founder · Pantry & Ferments",
     body: "Leads loaves, cultured butter, preserves, and the pantry counter rhythm.",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=700&h=800&fit=crop",
-    alt: "Portrait of a man in soft natural light",
+    alt: "Portrait representing the pantry and ferments lead at Marrow & Tide in Christchurch",
   },
   {
     title: "Neighbourhood makers",
     role: "Seasonal collaborators",
     body: "Fishers, growers, ceramicists, and friends whose work shows up in quiet but essential ways.",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=700&h=800&fit=crop",
-    alt: "Portrait of a woman in soft natural light",
+    alt: "Portrait representing local collaborators supporting Marrow & Tide in Lyttelton",
   },
 ];
 
@@ -78,13 +96,13 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-[1280px] items-center gap-10 px-6 py-16 md:px-8 md:py-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-10 lg:py-28">
           <img
             src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1000&h=1200&fit=crop"
-            alt="Chef plating food carefully in a professional kitchen"
+            alt="Chef preparing dishes for a Lyttelton coastal supper club at Marrow & Tide"
             className="order-1 h-[460px] w-full rounded-[28px] object-cover shadow-medium lg:order-2 lg:h-[640px]"
           />
           <div className="order-2 lg:order-1">
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-secondary">About Marrow &amp; Tide</p>
             <h1 className="mt-4 font-heading text-[42px] leading-none tracking-[-0.03em] text-primary md:text-6xl lg:text-[64px]">
-              A harbour-side table shaped by expedition kitchens, fermentation, and long winters down south.
+              About a harbour-side Lyttelton supper club shaped by expedition kitchens, fermentation, and long winters down south.
             </h1>
             <p className="prose-copy mt-6 text-lg leading-8 text-text/85">
               What began as a winter pop-up became a permanent rhythm in Lyttelton: suppers after dark, pantry staples by day, and a way of hosting that values warmth, provenance, and return custom over novelty alone.
@@ -143,7 +161,7 @@ export default function AboutPage() {
         </div>
         <img
           src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&h=900&fit=crop"
-          alt="Shared dinner scene with glasses and plates across a dark table"
+          alt="Shared dining table showing the intimate hospitality style of Marrow & Tide in Lyttelton"
           className="mx-auto mt-12 h-[360px] w-[320px] rounded-[28px] object-cover shadow-medium lg:absolute lg:bottom-10 lg:right-10 lg:mt-0"
         />
       </section>
@@ -188,7 +206,7 @@ export default function AboutPage() {
             </div>
             <img
               src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=900&h=700&fit=crop"
-              alt="Coastal landscape detail suggesting local origin and seasonality"
+              alt="Banks Peninsula coastal landscape reflecting the local sourcing behind Marrow & Tide in Lyttelton"
               className="mt-6 h-56 w-full rounded-[28px] object-cover shadow-soft"
             />
           </div>

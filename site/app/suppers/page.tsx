@@ -4,10 +4,28 @@ import { Flame, Soup, Users } from "lucide-react";
 import { FAQAccordion } from "@/components/faq-accordion";
 
 export const metadata: Metadata = {
-  title: "Suppers at Marrow & Tide | Seasonal long-table dining in Lyttelton",
+  title: "Seasonal Suppers in Lyttelton | Marrow & Tide",
   description:
-    "Explore upcoming Marrow & Tide suppers, seasonal menu themes, private dining options, and practical details for booking a seat in Lyttelton.",
+    "Book seasonal long-table suppers in Lyttelton, Christchurch with Marrow & Tide. Explore upcoming dining events, private suppers, and practical booking details.",
+  keywords: [
+    "seasonal suppers Lyttelton",
+    "long-table dining Christchurch",
+    "private dining Lyttelton",
+    "chef-led supper club Christchurch",
+    "book supper Lyttelton",
+  ],
   alternates: { canonical: "/suppers/" },
+  openGraph: {
+    title: "Seasonal Suppers in Lyttelton | Marrow & Tide",
+    description:
+      "Explore upcoming Marrow & Tide suppers, seasonal menu themes, and private dining options in Lyttelton, Christchurch.",
+    url: "/suppers/",
+  },
+  twitter: {
+    title: "Seasonal Suppers in Lyttelton | Marrow & Tide",
+    description:
+      "Explore upcoming Marrow & Tide suppers, seasonal menu themes, and private dining options in Lyttelton, Christchurch.",
+  },
 };
 
 const steps = [
@@ -39,7 +57,7 @@ const events = [
     dietary: "Vegetarian adaptation available with notice",
     availability: "8 seats left",
     image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=900&h=700&fit=crop",
-    alt: "Plated fish dish with herbs and textured garnish",
+    alt: "Seasonal seafood course served at a Marrow & Tide supper in Lyttelton",
   },
   {
     date: "02 May 2026",
@@ -48,7 +66,7 @@ const events = [
     dietary: "Gluten-light option available",
     availability: "Selling quickly",
     image: "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=900&h=700&fit=crop",
-    alt: "Styled plated meal on a rustic tabletop",
+    alt: "Long-table dining plate for a seasonal supper club in Christchurch",
   },
   {
     date: "16 May 2026",
@@ -57,7 +75,7 @@ const events = [
     dietary: "Please enquire for major dietary needs",
     availability: "Limited release",
     image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=900&h=700&fit=crop",
-    alt: "Seafood dish plated with herbs and dark stoneware",
+    alt: "Coastal supper dish plated for a chef-led dining event in Lyttelton",
   },
 ];
 
@@ -94,7 +112,7 @@ export default function SuppersPage() {
           <div className="relative overflow-hidden rounded-[32px] bg-primary shadow-hard">
             <img
               src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&h=900&fit=crop"
-              alt="Candlelit long-table supper with plates and glasses in a dim restaurant setting"
+              alt="Candlelit long-table dining event at Marrow & Tide in Lyttelton"
               className="h-[420px] w-full object-cover md:h-[520px]"
             />
             <div className="absolute inset-0 bg-primary/45" />
@@ -102,7 +120,7 @@ export default function SuppersPage() {
               <div className="rounded-[28px] bg-background p-8 shadow-medium md:p-10">
                 <p className="font-mono text-xs uppercase tracking-[0.3em] text-secondary">Suppers</p>
                 <h1 className="mt-4 font-heading text-[42px] leading-none tracking-[-0.03em] text-primary md:text-6xl lg:text-[64px]">
-                  Long-table evenings built around the season, the harbour, and a room that fills slowly on purpose.
+                  Seasonal suppers in Lyttelton built around the harbour, the table, and a room that fills slowly on purpose.
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-text/82">
                   Each supper is small by design. Menus change with catch, weather, and pantry work already underway in the kitchen, but the structure remains steady: a warm arrival, shared courses, attentive pacing, and a finish that lingers.
@@ -146,7 +164,7 @@ export default function SuppersPage() {
           <div className="mb-10 max-w-2xl">
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-secondary">Upcoming suppers</p>
             <h2 className="mt-4 font-heading text-[32px] leading-[1.05] tracking-[-0.03em] text-primary md:text-[42px]">
-              Three evenings with a shared structure and enough room for the season to move.
+              Upcoming long-table suppers in Lyttelton with enough room for the season to move.
             </h2>
           </div>
           <div className="space-y-6">
@@ -179,13 +197,13 @@ export default function SuppersPage() {
         <div className="mx-auto grid max-w-[1280px] items-center gap-10 px-6 md:px-8 lg:grid-cols-[1fr_1fr] lg:px-10">
           <img
             src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1000&h=900&fit=crop"
-            alt="Group seated around a dinner table during an evening gathering"
+            alt="Private dining gathering at a long table in Lyttelton, Christchurch"
             className="h-[420px] w-full rounded-[28px] object-cover shadow-hard"
           />
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-accent">Private dining</p>
             <h2 className="mt-4 font-heading text-[32px] leading-[1.05] tracking-[-0.03em] md:text-[42px]">
-              For birthdays, visiting friends, or harbour-side gatherings that need their own pace.
+              Private dining in Lyttelton for birthdays, visiting friends, or harbour-side gatherings that need their own pace.
             </h2>
             <p className="mt-6 text-lg leading-8 text-background/82">
               We host a small number of private suppers for groups who want the room, menu, and evening shaped around the occasion. Best suited to intimate celebrations, work dinners with taste, or visitors you actually want to feed well.

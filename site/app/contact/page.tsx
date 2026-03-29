@@ -2,10 +2,28 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Contact Marrow & Tide | Bookings, pantry pickups, and enquiries",
+  title: "Contact Marrow & Tide | Book a Supper in Lyttelton",
   description:
-    "Get in touch with Marrow & Tide in Lyttelton for supper bookings, pantry pickups, private dining enquiries, and weekly provisions updates.",
+    "Contact Marrow & Tide in Lyttelton, Christchurch for supper bookings, pantry pickups, private dining enquiries, and weekly provisions updates.",
+  keywords: [
+    "contact Marrow & Tide",
+    "book supper Lyttelton",
+    "private dining enquiry Christchurch",
+    "pantry pickup Lyttelton",
+    "Lyttelton restaurant contact",
+  ],
   alternates: { canonical: "/contact/" },
+  openGraph: {
+    title: "Contact Marrow & Tide | Book a Supper in Lyttelton",
+    description:
+      "Get in touch with Marrow & Tide for supper bookings, pantry pickups, and private dining enquiries in Lyttelton, Christchurch.",
+    url: "/contact/",
+  },
+  twitter: {
+    title: "Contact Marrow & Tide | Book a Supper in Lyttelton",
+    description:
+      "Get in touch with Marrow & Tide for supper bookings, pantry pickups, and private dining enquiries in Lyttelton, Christchurch.",
+  },
 };
 
 const enquiryOptions = [
@@ -23,7 +41,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-[980px] px-6 py-16 text-center md:px-8 md:py-20 lg:py-24">
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-secondary">Contact</p>
           <h1 className="mt-4 font-heading text-[42px] leading-none tracking-[-0.03em] text-primary md:text-6xl lg:text-[64px]">
-            Bookings, pantry pickups, private dining, and practical questions.
+            Contact Marrow &amp; Tide for bookings, pantry pickups, private dining, and practical questions.
           </h1>
           <p className="mx-auto mt-6 max-w-[64ch] text-lg leading-8 text-text/85">
             If you need a seat, a loaf, a gift box, or a clear answer, you’re in the right place.
@@ -67,7 +85,7 @@ export default function ContactPage() {
           </div>
           <img
             src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=900&h=700&fit=crop"
-            alt="Harbour-side natural landscape detail"
+            alt="Lyttelton harbour-side landscape near the Marrow & Tide supper club and pantry studio"
             className="h-full min-h-[320px] w-full rounded-[28px] object-cover shadow-soft"
           />
         </div>
@@ -81,11 +99,11 @@ export default function ContactPage() {
             </h2>
             <div className="mt-8 space-y-5">
               <div className="border-b border-secondary/25 pb-5">
-                <p className="font-mono text-xs uppercase tracking-[0.28em] text-secondary">Pantry</p>
+                <h3 className="font-mono text-xs uppercase tracking-[0.28em] text-secondary">Pantry</h3>
                 <p className="mt-2 text-lg leading-8 text-text/82">Thu–Sun · 9am–3pm</p>
               </div>
               <div className="border-b border-secondary/25 pb-5">
-                <p className="font-mono text-xs uppercase tracking-[0.28em] text-secondary">Suppers</p>
+                <h3 className="font-mono text-xs uppercase tracking-[0.28em] text-secondary">Suppers</h3>
                 <p className="mt-2 text-lg leading-8 text-text/82">Fri–Sat · from 6pm</p>
               </div>
               <p className="text-base leading-7 text-text/72">Monthly supper releases are announced first through the mailing list.</p>

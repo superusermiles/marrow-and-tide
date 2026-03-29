@@ -23,26 +23,32 @@ const monoFont = IBM_Plex_Mono({
 });
 
 const siteName = "Marrow & Tide";
+const siteTitle = "Coastal Supper Club Lyttelton | Marrow & Tide";
 const siteDescription =
-  "Chef-led coastal suppers, pantry staples, and slow hospitality in Lyttelton. Reserve a long-table evening or explore small-batch provisions from Marrow & Tide.";
+  "Chef-led coastal supper club and pantry provisions studio in Lyttelton, Christchurch. Book seasonal long-table dining and small-batch pantry staples at Marrow & Tide.";
+const socialDescription =
+  "Discover chef-led coastal suppers, pantry provisions, and slow hospitality in Lyttelton, Christchurch at Marrow & Tide.";
 const siteUrl = "https://marrow-and-tide.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: {
-    default: `${siteName} | Coastal suppers and pantry provisions in Lyttelton`,
-    template: `%s | ${siteName}`,
-  },
+  title: siteTitle,
   description: siteDescription,
-  alternates: {
-    canonical: "/",
-  },
-  icons: {
-    icon: "/favicon.svg",
-  },
+  keywords: [
+    "coastal supper club Lyttelton",
+    "Lyttelton supper club",
+    "Christchurch supper club",
+    "seasonal dining Lyttelton",
+    "long-table dining Christchurch",
+    "pantry provisions Lyttelton",
+    "private dining Lyttelton",
+    "chef-led dining Christchurch",
+    "Lyttelton restaurant",
+    "small-batch pantry staples Christchurch",
+  ],
   openGraph: {
-    title: `${siteName} | Coastal suppers and pantry provisions in Lyttelton`,
-    description: siteDescription,
+    title: siteTitle,
+    description: socialDescription,
     url: siteUrl,
     siteName,
     locale: "en_NZ",
@@ -52,15 +58,25 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Marrow & Tide brand card",
+        alt: "Marrow & Tide coastal supper club and pantry provisions social card",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteName} | Coastal suppers and pantry provisions in Lyttelton`,
-    description: siteDescription,
+    title: siteTitle,
+    description: socialDescription,
     images: ["/opengraph-image"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: siteUrl,
+  },
+  icons: {
+    icon: "/favicon.svg",
   },
 };
 
@@ -73,40 +89,69 @@ const navLinks = [
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Restaurant",
-  name: siteName,
-  description: siteDescription,
-  url: siteUrl,
-  telephone: "+64 3 741 2098",
-  email: "hello@marrowandtide.co.nz",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "14 Norwich Quay",
-    addressLocality: "Lyttelton",
-    postalCode: "8082",
-    addressCountry: "NZ",
-  },
-  servesCuisine: ["Seasonal", "Coastal", "New Zealand"],
-  sameAs: ["https://www.instagram.com/"],
-  openingHoursSpecification: [
+  "@graph": [
     {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Thursday", "Friday", "Saturday", "Sunday"],
-      opens: "09:00",
-      closes: "15:00",
+      "@type": "Restaurant",
+      "@id": `${siteUrl}/#restaurant`,
+      name: siteName,
+      description: siteDescription,
+      url: siteUrl,
+      telephone: "+64 3 741 2098",
+      email: "hello@marrowandtide.co.nz",
+      image: `${siteUrl}/opengraph-image`,
+      servesCuisine: ["Coastal", "Seasonal", "New Zealand"],
+      priceRange: "$$$",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "14 Norwich Quay",
+        addressLocality: "Lyttelton",
+        addressRegion: "Christchurch",
+        postalCode: "8082",
+        addressCountry: "NZ",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: -43.6027,
+        longitude: 172.7192,
+      },
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Thursday", "Friday", "Saturday", "Sunday"],
+          opens: "09:00",
+          closes: "15:00",
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Friday", "Saturday"],
+          opens: "18:00",
+          closes: "23:00",
+        },
+      ],
+      areaServed: [
+        { "@type": "City", name: "Lyttelton" },
+        { "@type": "City", name: "Christchurch" },
+        { "@type": "AdministrativeArea", name: "Banks Peninsula" },
+      ],
+      sameAs: ["https://www.instagram.com/"],
     },
     {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Friday", "Saturday"],
-      opens: "18:00",
-      closes: "23:00",
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: siteName,
+      description: siteDescription,
+      inLanguage: "en-NZ",
+      publisher: {
+        "@id": `${siteUrl}/#restaurant`,
+      },
     },
   ],
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${headingFont.variable} ${bodyFont.variable} ${monoFont.variable}`}>
+    <html lang="en-NZ" className={`${headingFont.variable} ${bodyFont.variable} ${monoFont.variable}`}>
       <body className="min-h-screen bg-background text-text">
         <SiteHeader links={navLinks} ctaLabel="Book a Supper" ctaHref="/suppers/#upcoming" />
         <main className="flex-1">{children}</main>
