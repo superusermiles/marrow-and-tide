@@ -29,6 +29,8 @@ const siteDescription =
 const socialDescription =
   "Discover chef-led coastal suppers, pantry provisions, and slow hospitality in Lyttelton, Christchurch at Marrow & Tide.";
 const siteUrl = "https://marrow-and-tide.vercel.app";
+const instagramUrl = "https://www.instagram.com/marrowandtide";
+const bookingPath = "/contact/?enquiry=supper-booking";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -55,7 +57,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "Marrow & Tide coastal supper club and pantry provisions social card",
@@ -66,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteTitle,
     description: socialDescription,
-    images: ["/opengraph-image"],
+    images: ["/opengraph-image.png"],
   },
   robots: {
     index: true,
@@ -98,7 +100,7 @@ const jsonLd = {
       url: siteUrl,
       telephone: "+64 3 741 2098",
       email: "hello@marrowandtide.co.nz",
-      image: `${siteUrl}/opengraph-image`,
+      image: `${siteUrl}/opengraph-image.png`,
       servesCuisine: ["Coastal", "Seasonal", "New Zealand"],
       priceRange: "$$$",
       address: {
@@ -133,7 +135,7 @@ const jsonLd = {
         { "@type": "City", name: "Christchurch" },
         { "@type": "AdministrativeArea", name: "Banks Peninsula" },
       ],
-      sameAs: ["https://www.instagram.com/"],
+      sameAs: [instagramUrl],
     },
     {
       "@type": "WebSite",
@@ -153,7 +155,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en-NZ" className={`${headingFont.variable} ${bodyFont.variable} ${monoFont.variable}`}>
       <body className="min-h-screen bg-background text-text">
-        <SiteHeader links={navLinks} ctaLabel="Book a Supper" ctaHref="/suppers/#upcoming" />
+        <SiteHeader links={navLinks} ctaLabel="Book a Supper" ctaHref={bookingPath} />
         <main className="flex-1">{children}</main>
         <SiteFooter />
         <script

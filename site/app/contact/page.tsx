@@ -31,8 +31,14 @@ const enquiryOptions = [
   "Supper booking",
   "Private dining",
   "Pantry order",
+  "Mailing list",
   "Press / collaboration",
 ];
+
+const instagramUrl = "https://www.instagram.com/marrowandtide";
+const bookingPath = "/contact/?enquiry=supper-booking#enquiry-form";
+const privateDiningPath = "/contact/?enquiry=private-dining#enquiry-form";
+const mailingListPath = "/contact/?enquiry=mailing-list#enquiry-form";
 
 export default function ContactPage() {
   return (
@@ -76,9 +82,12 @@ export default function ContactPage() {
                   </a>
                 </p>
               </div>
-              <div className="flex items-end">
-                <Link href="/suppers/#upcoming" className="rounded-full bg-primary px-6 py-3 font-semibold text-background transition hover:bg-secondary">
+              <div className="flex flex-wrap items-end gap-3">
+                <Link href={bookingPath} className="rounded-full bg-primary px-6 py-3 font-semibold text-background transition hover:bg-secondary">
                   Book a Supper
+                </Link>
+                <Link href={privateDiningPath} className="rounded-full border border-secondary/30 px-6 py-3 font-semibold text-primary transition hover:bg-muted">
+                  Private Dining
                 </Link>
               </div>
             </div>
@@ -129,13 +138,16 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-muted py-16 md:py-20 lg:py-24">
+      <section id="enquiry-form" className="bg-muted py-16 md:py-20 lg:py-24">
         <div className="mx-auto max-w-[1280px] px-6 md:px-8 lg:px-10">
           <div className="mb-10 max-w-2xl">
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-secondary">Enquiry form</p>
             <h2 className="mt-4 font-heading text-[32px] leading-[1.05] tracking-[-0.03em] text-primary md:text-[42px]">
               Tell us what you need and we’ll come back with a useful answer.
             </h2>
+            <p className="mt-5 text-base leading-7 text-text/75">
+              Use this form for supper bookings, private dining enquiries, pantry orders, or mailing list requests.
+            </p>
           </div>
           <form action="https://formsubmit.co/hello@marrowandtide.co.nz" method="POST" className="grid gap-5 rounded-[28px] bg-background p-8 shadow-medium md:grid-cols-2 md:p-10">
             <input type="hidden" name="_subject" value="Marrow &amp; Tide enquiry" />
@@ -162,7 +174,7 @@ export default function ContactPage() {
               <label htmlFor="type" className="mb-2 block font-mono text-xs uppercase tracking-[0.28em] text-secondary">
                 Enquiry type
               </label>
-              <select id="type" name="enquiryType" className="w-full rounded-[18px] border border-secondary/25 px-4 py-3">
+              <select id="type" name="enquiryType" className="w-full rounded-[18px] border border-secondary/25 px-4 py-3" defaultValue="Supper booking">
                 {enquiryOptions.map((option) => (
                   <option key={option}>{option}</option>
                 ))}
@@ -205,12 +217,12 @@ export default function ContactPage() {
             Find supper releases, pantry drops, and harbour glimpses on Instagram, or join the list for the practical version.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <a href="https://www.instagram.com/" className="rounded-full bg-accent px-6 py-3 font-semibold text-primary transition hover:bg-[#b88f46]">
+            <a href={instagramUrl} className="rounded-full bg-accent px-6 py-3 font-semibold text-primary transition hover:bg-[#b88f46]">
               Instagram
             </a>
-            <a href="#" className="rounded-full border border-background/40 px-6 py-3 font-semibold text-background transition hover:bg-background/10">
+            <Link href={mailingListPath} className="rounded-full border border-background/40 px-6 py-3 font-semibold text-background transition hover:bg-background/10">
               Join the List
-            </a>
+            </Link>
           </div>
         </div>
       </section>

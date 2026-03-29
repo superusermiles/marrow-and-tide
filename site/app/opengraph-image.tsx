@@ -1,7 +1,8 @@
-export const dynamic = "force-static";
-
 import { ImageResponse } from "next/og";
 
+export const dynamic = "force-static";
+export const runtime = "nodejs";
+export const alt = "Marrow & Tide coastal supper club and pantry provisions social card";
 export const size = {
   width: 1200,
   height: 630,

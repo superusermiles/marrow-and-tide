@@ -104,6 +104,9 @@ const faqItems = [
   },
 ];
 
+const bookingPath = "/contact/?enquiry=supper-booking#enquiry-form";
+const privateDiningPath = "/contact/?enquiry=private-dining#enquiry-form";
+
 export default function SuppersPage() {
   return (
     <>
@@ -126,11 +129,11 @@ export default function SuppersPage() {
                   Each supper is small by design. Menus change with catch, weather, and pantry work already underway in the kitchen, but the structure remains steady: a warm arrival, shared courses, attentive pacing, and a finish that lingers.
                 </p>
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                  <Link href="/contact/" className="rounded-full bg-primary px-6 py-3 text-center font-semibold text-background transition hover:bg-secondary">
-                    Book Now
+                  <Link href={bookingPath} className="rounded-full bg-primary px-6 py-3 text-center font-semibold text-background transition hover:bg-secondary">
+                    Book a Supper Enquiry
                   </Link>
-                  <Link href="/contact/" className="rounded-full border border-secondary/30 px-6 py-3 text-center font-semibold text-primary transition hover:bg-muted">
-                    Enquire for Private Dining
+                  <Link href={privateDiningPath} className="rounded-full border border-secondary/30 px-6 py-3 text-center font-semibold text-primary transition hover:bg-muted">
+                    Private Dining Enquiry
                   </Link>
                 </div>
               </div>
@@ -183,8 +186,8 @@ export default function SuppersPage() {
                   <p className="rounded-[18px] bg-background px-4 py-3 font-mono text-xs uppercase tracking-[0.22em] text-secondary">
                     {event.dietary}
                   </p>
-                  <Link href="/contact/" className="inline-flex rounded-full bg-primary px-6 py-3 font-semibold text-background transition hover:bg-secondary">
-                    Book Now
+                  <Link href={bookingPath} className="inline-flex rounded-full bg-primary px-6 py-3 font-semibold text-background transition hover:bg-secondary">
+                    Start Booking Enquiry
                   </Link>
                 </div>
               </article>
@@ -213,7 +216,7 @@ export default function SuppersPage() {
               <li>• Seasonal shared menu format</li>
               <li>• Dietary planning by arrangement</li>
             </ul>
-            <Link href="/contact/" className="mt-8 inline-flex rounded-full bg-accent px-6 py-3 font-semibold text-primary transition hover:bg-[#b88f46]">
+            <Link href={privateDiningPath} className="mt-8 inline-flex rounded-full bg-accent px-6 py-3 font-semibold text-primary transition hover:bg-[#b88f46]">
               Enquire for Private Dining
             </Link>
           </div>
@@ -241,8 +244,8 @@ export default function SuppersPage() {
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-background/82">
               Tell us what you’re planning and we’ll come back with options.
             </p>
-            <Link href="/contact/" className="mt-8 inline-flex rounded-full bg-accent px-6 py-3 font-semibold text-primary transition hover:bg-[#b88f46]">
-              Contact Marrow &amp; Tide
+            <Link href={privateDiningPath} className="mt-8 inline-flex rounded-full bg-accent px-6 py-3 font-semibold text-primary transition hover:bg-[#b88f46]">
+              Start a Private Dining Enquiry
             </Link>
           </div>
         </div>

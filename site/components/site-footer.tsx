@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { LogoMark } from "@/components/logo-mark";
 
+const instagramUrl = "https://www.instagram.com/marrowandtide";
+const mailingListUrl = "/contact/?enquiry=mailing-list#enquiry-form";
+
 export function SiteFooter() {
   return (
     <footer className="bg-primary text-background">
@@ -36,7 +39,7 @@ export function SiteFooter() {
                 <span className="mr-2 font-mono text-xs uppercase tracking-[0.25em] text-muted">Suppers</span>
                 Fri–Sat · from 6pm
               </p>
-              <p className="max-w-sm mx-auto lg:mx-0">Bookings open monthly. Pantry drops vary with the season.</p>
+              <p className="mx-auto max-w-sm lg:mx-0">Bookings open monthly. Pantry drops vary with the season.</p>
             </div>
           </div>
 
@@ -45,26 +48,17 @@ export function SiteFooter() {
             <p className="text-base text-background/85">
               A short note from the harbour — supper dates, fresh loaves, cultured butter, and whatever has come in with the week.
             </p>
-            <form action="https://formsubmit.co/hello@marrowandtide.co.nz" method="POST" className="space-y-3">
-              <input type="hidden" name="_subject" value="Marrow &amp; Tide newsletter sign-up" />
-              <input type="hidden" name="_captcha" value="false" />
-              <label className="sr-only" htmlFor="footer-email">
-                Email address
-              </label>
-              <input
-                id="footer-email"
-                name="email"
-                type="email"
-                required
-                placeholder="Email address"
-                className="w-full rounded-full border border-secondary/40 bg-background/10 px-5 py-3 text-background placeholder:text-background/60"
-              />
-              <button type="submit" className="w-full rounded-full bg-accent px-5 py-3 font-semibold text-primary transition hover:bg-[#b88f46]">
+            <div className="space-y-3">
+              <Link
+                href={mailingListUrl}
+                className="inline-flex w-full items-center justify-center rounded-full bg-accent px-5 py-3 font-semibold text-primary transition hover:bg-[#b88f46]"
+              >
                 Join the List
-              </button>
-            </form>
+              </Link>
+              <p className="text-sm leading-6 text-background/65">Use the contact page list signup flow for supper releases and pantry updates.</p>
+            </div>
             <div className="flex justify-center gap-5 text-sm uppercase tracking-[0.2em] lg:justify-start">
-              <Link href="https://www.instagram.com/" className="transition hover:text-accent">
+              <Link href={instagramUrl} className="transition hover:text-accent">
                 Instagram
               </Link>
               <a href="mailto:hello@marrowandtide.co.nz" className="transition hover:text-accent">
